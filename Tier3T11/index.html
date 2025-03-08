@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Notes App</h1>
+
+        <!-- Add Note Section -->
+        <div class="section" id="addNoteSection">
+            <h2>Add a Note</h2>
+            <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+            <button class="add-button" onclick="addNote()">Add Note</button>
+        </div>
+
+        <!-- View Notes Section -->
+        <div class="section" id="viewNotesSection">
+            <h2>View Notes</h2>
+            <ul id="notesList"></ul>
+        </div>
+
+        <!-- Update Note Section (Hidden initially) -->
+        <div class="section" id="updateNoteSection" style="display: none;">
+            <h2>Edit Note</h2>
+            <input type="hidden" id="editNoteId">
+            <textarea id="editNoteContent"></textarea>
+            <button class="edit-button" onclick="updateNote()">Save Changes</button>
+            <button class="cancel-button" onclick="cancelEdit()">Cancel</button>
+        </div>
+
+        <!-- Delete Note Section (Handled by buttons in View Notes) -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
